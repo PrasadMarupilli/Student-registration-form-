@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Student Registration Form</h2>
+  <form id="registrationForm" action="http://localhost:3000/register" method="POST" enctype="multipart/form-data">
+    <!-- Basic Details -->
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Create Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male"> Male
+    <input type="radio" id="female" name="gender" value="Female"> Female
+    <input type="radio" id="other" name="gender" value="Other"> Other
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number">
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course">
+      <option value="">--Select--</option>
+      <option value="B.Tech">B.Tech</option>
+      <option value="M.Tech">M.Tech</option>
+      <option value="MBA">MBA</option>
+      <option value="B.Sc">B.Sc</option>
+    </select>
+
+    <label for="skills">Technical Skills:</label>
+    <input type="checkbox" name="skills" value="C"> C
+    <input type="checkbox" name="skills" value="Java"> Java
+    <input type="checkbox" name="skills" value="Python"> Python
+    <input type="checkbox" name="skills" value="Web Development"> Web Development
+
+    <label for="address">Permanent Address:</label>
+    <textarea id="address" name="address" rows="3"></textarea>
+
+    <label for="profilePic">Upload Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic">
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color">
+
+    <label for="website">Portfolio Website:</label>
+    <input type="url" id="website" name="website">
+
+    <label for="experience">Years of Experience (if any):</label>
+    <input type="number" id="experience" name="experience" min="0" max="20">
+
+    <label for="range">Interest in Coding (0-10):</label>
+    <input type="range" id="range" name="range" min="0" max="10">
+
+    <button type="submit">Register</button>
+  </form>
+
+  <script src="validate.js"></script>
+</body>
+</html>
